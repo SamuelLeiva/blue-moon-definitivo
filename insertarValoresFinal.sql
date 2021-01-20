@@ -99,7 +99,7 @@ insert into PLATO values ('BMPLA-0'+Convert(varchar(20),next value for seq_plato
 insert into PLATO values ('BMPLA-0'+Convert(varchar(20),next value for seq_plato),'BMCAT-01', 'Buffet Especial Medio',42.50,null);
 
 --categoria carne
-
+use bluemoondefinitivo;
 insert into PLATO values ('BMPLA-0'+Convert(varchar(20),next value for seq_plato),'BMCAT-02' , 'Asado de res a la olla con puré', 48,null);
 insert into PLATO values ('BMPLA-0'+Convert(varchar(20),next value for seq_plato),'BMCAT-02' , 'Cabrito al pastor', 58,null);
 insert into PLATO values ('BMPLA-0'+Convert(varchar(20),next value for seq_plato),'BMCAT-02' , 'Chateaubriand de ternera', 150,null);
