@@ -1,5 +1,7 @@
 --create database bluemoondefinitivo;
+
 use bluemoondefinitivo;
+
 
 CREATE TABLE ALMACEN
 ( 
@@ -126,8 +128,8 @@ go
 
 CREATE TABLE DET_BEBIDA_PEDIDO
 ( 
-	CANTIDAD             char(18)  NULL ,
-	PRECIO               char(18)  NULL ,
+	CANTIDAD             integer  NULL ,
+	PRECIO               numeric(8,2)  NULL ,
 	ID_PEDIDO            varchar(20)  NOT NULL ,
 	ID_BEBIDA            varchar(20)  NOT NULL 
 )
@@ -160,8 +162,8 @@ go
 
 CREATE TABLE DET_FACTURA_COMPRA
 ( 
-	CANITDAD             char(18)  NULL ,
-	PRECIO               char(18)  NULL ,
+	CANTIDAD             integer  NULL ,
+	PRECIO               NUMERIC(8,2)  NULL ,
 	ID_PRODUCTO          varchar(20)  NOT NULL ,
 	ID_FACTURA_COMPRA    varchar(20)  NOT NULL 
 )
@@ -177,7 +179,7 @@ go
 
 CREATE TABLE DET_GUIA_ENTRADA
 ( 
-	CANTIDAD             decimal(10,2)  NULL ,
+	CANTIDAD             integer  NULL ,
 	ID_PRODUCTO          varchar(20)  NOT NULL ,
 	ID_GUIA_ENTRADA      varchar(20)  NOT NULL 
 )
@@ -195,7 +197,7 @@ CREATE TABLE DET_GUIA_SALIDA
 ( 
 	ID_PRODUCTO          varchar(20)  NOT NULL ,
 	ID_GUIA_SALIDA       varchar(20)  NOT NULL ,
-	CANTIDAD             numeric(8,2)  NULL 
+	CANTIDAD             integer  NULL 
 )
 go
 
@@ -209,7 +211,7 @@ go
 
 CREATE TABLE DET_INVENTARIO
 ( 
-	CANTIDAD             numeric(10,2)  NOT NULL ,
+	CANTIDAD             integer  NOT NULL ,
 	ID_ALMACEN           varchar(20)  NOT NULL ,
 	ID_PRODUCTO          varchar(20)  NOT NULL 
 )
@@ -266,9 +268,9 @@ CREATE TABLE FACTURA_COMPRA
 	ID_PROVEEDOR         varchar(20)  NULL ,
 	ID_FACTURA_COMPRA    varchar(20)  NOT NULL ,
 	FECHA                datetime  NOT NULL ,
-	IGV                  decimal(5,2)  NOT NULL ,
-	SUBTOTAL             decimal(12,2)  NOT NULL ,
-	TOTAL_FACTURA        decimal(12,2)  NOT NULL ,
+	IGV                  numeric(5,2)  NOT NULL ,
+	SUBTOTAL             numeric(12,2)  NOT NULL ,
+	TOTAL_FACTURA        numeric(12,2)  NOT NULL ,
 	OBSERVACIONES        varchar(50)  NULL 
 )
 go
@@ -355,7 +357,7 @@ CREATE TABLE PEDIDO_COMPRA
 	ID_PROVEEDOR         varchar(20)  NULL ,
 	ID_PRODUCTO          varchar(20)  NULL ,
 	PRECIO               numeric(8,2)  NULL ,
-	CANTIDAD             numeric(8,2)  NULL 
+	CANTIDAD             integer  NULL 
 )
 go
 
@@ -371,7 +373,7 @@ CREATE TABLE PERSONAL
 ( 
 	ID_CARGO             varchar(20)  NOT NULL ,
 	ID_PERSONAL          varchar(20)  NOT NULL ,
-	DNI_PERSONAL         numeric(8)  NOT NULL ,
+	DNI_PERSONAL         integer  NOT NULL ,
 	NOMBRE_PERSONAL      varchar(50)  NOT NULL ,
 	APELLIDO_PERSONAL    varchar(50)  NOT NULL ,
 	TELEFONO_PERSONAL    integer  NOT NULL ,
@@ -774,4 +776,3 @@ ALTER TABLE USUARIO
 		ON DELETE NO ACTION
 		ON UPDATE NO ACTION
 go
-
