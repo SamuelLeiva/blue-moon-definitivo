@@ -45,12 +45,12 @@ public class MesaDAO implements CRUD{
     }
 
     @Override
-    public int agregar(Object o) {
+    public int agregar(Object[] o) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int actualizar(Object o) {
+    public int actualizar(Object[] o) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

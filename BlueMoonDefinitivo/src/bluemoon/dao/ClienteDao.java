@@ -40,7 +40,7 @@ public class ClienteDao implements CRUD{
     }
 
     @Override
-    public int add(Object[] o) {
+    public int agregar(Object[] o) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -50,7 +50,7 @@ public class ClienteDao implements CRUD{
     }
 
     @Override
-    public void eliminar(int id) {
+    public void eliminar(String id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
