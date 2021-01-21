@@ -38,17 +38,44 @@ public class DetInventarioDao implements CRUD{
 
     @Override
     public int agregar(Object[] o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int r = 0;
+        String sqlInsert = "insert into DET_INVENTARIO values (?,?,?)";
+        
+        try {
+                        
+            ps = con.prepareStatement(sqlInsert);
+            ps.setObject(1, o[0]);
+            ps.setObject(2, o[1]);
+            ps.setObject(3, o[2]);
+            r=ps.executeUpdate();
+        } catch (Exception e) {
+        }
+        return r;
     }
 
     @Override
     public int actualizar(Object[] o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int r = 0;
+        String sql = "update DET_INVENTARIO set CANTIDAD=? WHERE ID_PRODUCTO=?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setObject(1, o[0]);
+            ps.setObject(2, o[2]);
+            r = ps.executeUpdate();
+        } catch (Exception e) {
+        }
+        return r;
     }
 
     @Override
     public void eliminar(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "delete from DET_INVENTARIO where ID_PRODUCTO=?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, id);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
     }
     
 }

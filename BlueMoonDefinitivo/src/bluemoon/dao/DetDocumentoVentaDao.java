@@ -36,19 +36,48 @@ public class DetDocumentoVentaDao implements CRUD{
         return lista;
     }
 
-    @Override
+   @Override
     public int agregar(Object[] o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int r = 0;
+        String sqlInsert = "insert into det_documento_venta values (?,?,?,?)";
+        
+        try {
+                        
+            ps = con.prepareStatement(sqlInsert);
+            ps.setObject(1, o[0]);
+            ps.setObject(2, o[1]);
+            ps.setObject(3, o[2]);
+            ps.setObject(4, o[3]);
+            r=ps.executeUpdate();
+        } catch (Exception e) {
+        }
+        return r;
     }
 
     @Override
     public int actualizar(Object[] o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int r = 0;
+        String sql = "update det_documento_venta set PRECIO=?,CANTIDAD=? WHERE ID_DOCUMENTO_VENTA=?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setObject(1, o[3]);
+            ps.setObject(2, o[4]);
+            ps.setObject(3, o[0]);
+            r = ps.executeUpdate();
+        } catch (Exception e) {
+        }
+        return r;
     }
 
     @Override
     public void eliminar(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "delete from det_documento_venta where id_documento_venta=?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, id);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
     }
     
 }

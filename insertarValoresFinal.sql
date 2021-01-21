@@ -1,28 +1,25 @@
 use bluemoondefinitivo;
 
-insert into RESTAURANTE VALUES(
-	'RES-01', 'A101','Blue Moon',
-	'Restaurante de comida mediterránea, especializado en comida italiana ubicado en el distrito de Lince.');
 
-insert into SEDE values('RES-01', 'BM-01', 'Lince', 'Jr. Brigadier Mateo Pumacahua 2520, Lince, Lima', 4701631,'bluemoon@gmail.com');
+insert into SEDE values('BM-01', 'Lince', 'Jr. Brigadier Mateo Pumacahua 2520, Lince, Lima', 4701631,'bluemoon@gmail.com');
 
 use bluemoondefinitivo;
 insert into ALMACEN VALUES('BM-01','BMA-01', 'Almacén de Lince');
 --tabla cargo
 use bluemoondefinitivo;
-INSERT INTO cargo values('BMC-01', 'Gerente', 'Gestiona los procesos del restaurante.',null, null, 'Activo');
-INSERT INTO cargo values('BMC-02', 'Jefe de Cocina', 'Se encarga de transmitir las órdenes y supervisar los platillos..',null, null, 'Activo');
-INSERT INTO cargo values('BMC-03', 'Chef ejecutivo', 'Se encarga de crear y ajustar el menú y coordina el trabajo de la cocina.',null, null, 'Activo');
-INSERT INTO cargo values('BMC-04', 'Pastelero', 'Se encarga de hacer recetas de postres y prepararlos.',null, null, 'Activo');
-INSERT INTO cargo values('BMC-05', 'Ayudante de cocina', 'Sigue las ordenes de los chefs principales.',null, null, 'Activo');
-INSERT INTO cargo values('BMC-06', 'Lavaplatos', 'Lavan platos y utensilios de cocina.',null, null, 'Activo');
-INSERT INTO cargo values('BMC-07', 'Administrador', 'Administra el restaurante y contrata al personal.',null, null, 'Activo');
-INSERT INTO cargo values('BMC-08', 'Barman', 'Prepara las bebidas y atiende la barra.',null, null, 'Activo');
-INSERT INTO cargo values('BMC-09', 'Mozo', 'Atiende las mesas y cobra.',null, null, 'Activo');
-INSERT INTO cargo values('BMC-10', 'Cajero', 'Atiende la caja.',null, null, 'Activo');
-INSERT INTO cargo values('BMC-11', 'Chef Linea Fria', 'Prepara platos que no necesitan coccion.',null, null, 'Activo');
-INSERT INTO cargo values('BMC-12', 'Jefe de Almacén', 'Coordina y dirige las actividades de almacén.',null, null, 'Activo');
-INSERT INTO cargo values('BMC-13', 'Asistente de Almacén', 'Ayuda en las actividades de almacén.',null, null, 'Activo');
+INSERT INTO cargo values('BMC-01', 'Gerente', 'Gestiona los procesos del restaurante.');
+INSERT INTO cargo values('BMC-02', 'Jefe de Cocina', 'Se encarga de transmitir las órdenes y supervisar los platillos.');
+INSERT INTO cargo values('BMC-03', 'Chef ejecutivo', 'Se encarga de crear y ajustar el menú y coordina el trabajo de la cocina.');
+INSERT INTO cargo values('BMC-04', 'Pastelero', 'Se encarga de hacer recetas de postres y prepararlos.');
+INSERT INTO cargo values('BMC-05', 'Ayudante de cocina', 'Sigue las ordenes de los chefs principales.');
+INSERT INTO cargo values('BMC-06', 'Lavaplatos', 'Lavan platos y utensilios de cocina.');
+INSERT INTO cargo values('BMC-07', 'Administrador', 'Administra el restaurante y contrata al personal.');
+INSERT INTO cargo values('BMC-08', 'Barman', 'Prepara las bebidas y atiende la barra.');
+INSERT INTO cargo values('BMC-09', 'Mozo', 'Atiende las mesas y cobra.');
+INSERT INTO cargo values('BMC-10', 'Cajero', 'Atiende la caja.');
+INSERT INTO cargo values('BMC-11', 'Chef Linea Fria', 'Prepara platos que no necesitan coccion.');
+INSERT INTO cargo values('BMC-12', 'Jefe de Almacén', 'Coordina y dirige las actividades de almacén.');
+INSERT INTO cargo values('BMC-13', 'Asistente de Almacén', 'Ayuda en las actividades de almacén.');
 
 --tabla mesa
 use bluemoondefinitivo;
@@ -268,17 +265,17 @@ insert into CATEGORIA_PRODUCTO values('BMCATP-0'+Convert(varchar(20),next value 
 
 --- tabla bebida(poner secuencia)
 use bluemoondefinitivo;
-insert into BEBIDA values ('BMCATB-0'+Convert(varchar(20),next value for seq_bebida),'Jarra de Chicha',null,32,'BMCATB-01');
-insert into BEBIDA values ('BMCATB-0'+Convert(varchar(20),next value for seq_bebida),'Jarra de Cremolada',null,32,'BMCATB-01');
-insert into BEBIDA values ('BMCATB-0'+Convert(varchar(20),next value for seq_bebida),'Jarra de Limonada',null,32,'BMCATB-01');
-insert into BEBIDA values ('BMCATB-0'+Convert(varchar(20),next value for seq_bebida),'Jugo Fruta de la estación',null,12,'BMCATB-01');
-insert into BEBIDA values ('BMCATB-0'+Convert(varchar(20),next value for seq_bebida),'Jugo de fruta con leche',null,17,'BMCATB-01');
-insert into BEBIDA values ('BMCATB-0'+Convert(varchar(20),next value for seq_bebida),'Vaso de chicha',null,7,'BMCATB-01');
-insert into BEBIDA values ('BMCATB-0'+Convert(varchar(20),next value for seq_bebida),'Vaso de cremolada',null,7,'BMCATB-01');
-insert into BEBIDA values ('BMCATB-0'+Convert(varchar(20),next value for seq_bebida),'Vaso de limonada',null,7,'BMCATB-01');
-insert into BEBIDA values ('BMCATB-0'+Convert(varchar(20),next value for seq_bebida),'Gaseosa',null,7,'BMCATB-01');
-insert into BEBIDA values ('BMCATB-0'+Convert(varchar(20),next value for seq_bebida),'Botella de agua mineral',null,7,'BMCATB-01');
-insert into BEBIDA values ('BMCATB-0'+Convert(varchar(20),next value for seq_bebida),'Cerveza',null,12,'BMCATB-01');
+insert into BEBIDA values ('BMBEB-0'+Convert(varchar(20),next value for seq_bebida),'Jarra de Chicha',null,32,'BMCATB-01');
+insert into BEBIDA values ('BMBEB-0'+Convert(varchar(20),next value for seq_bebida),'Jarra de Cremolada',null,32,'BMCATB-01');
+insert into BEBIDA values ('BMBEB-0'+Convert(varchar(20),next value for seq_bebida),'Jarra de Limonada',null,32,'BMCATB-01');
+insert into BEBIDA values ('BMBEB-0'+Convert(varchar(20),next value for seq_bebida),'Jugo Fruta de la estación',null,12,'BMCATB-01');
+insert into BEBIDA values ('BMBEB-0'+Convert(varchar(20),next value for seq_bebida),'Jugo de fruta con leche',null,17,'BMCATB-01');
+insert into BEBIDA values ('BMBEB-0'+Convert(varchar(20),next value for seq_bebida),'Vaso de chicha',null,7,'BMCATB-01');
+insert into BEBIDA values ('BMBEB-0'+Convert(varchar(20),next value for seq_bebida),'Vaso de cremolada',null,7,'BMCATB-01');
+insert into BEBIDA values ('BMBEB-0'+Convert(varchar(20),next value for seq_bebida),'Vaso de limonada',null,7,'BMCATB-01');
+insert into BEBIDA values ('BMBEB-0'+Convert(varchar(20),next value for seq_bebida),'Gaseosa',null,7,'BMCATB-01');
+insert into BEBIDA values ('BMBEB-0'+Convert(varchar(20),next value for seq_bebida),'Botella de agua mineral',null,7,'BMCATB-01');
+insert into BEBIDA values ('BMBEB-0'+Convert(varchar(20),next value for seq_bebida),'Cerveza',null,12,'BMCATB-01');
 
 
 --- categoria bebida caliente

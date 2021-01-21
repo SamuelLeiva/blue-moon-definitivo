@@ -37,17 +37,56 @@ public class CategoriaProductoDao implements CRUD{
 
     @Override
     public int agregar(Object[] o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int r = 0;
+        String sqlInsert = "insert into CATEGORIA_PRODUCTO values (?,?,?)";
+        String myId = "";
+        
+        //sacar id de la secuencia de la respectiva tabla
+        String sqlIdentifier = "SELECT NEXT VALUE FOR seq_categoria_producto;";
+        
+        try {
+            PreparedStatement pst = con.prepareStatement(sqlIdentifier);
+            ResultSet rs1 = pst.executeQuery();
+            if(rs1.next()){
+                myId = "BMCATP-0" + rs1.getInt(1);
+            }else{
+                myId = "BMCATP-10000";
+            }
+                        
+            ps = con.prepareStatement(sqlInsert);
+            ps.setObject(1, myId);
+            ps.setObject(2, o[1]);
+            ps.setObject(3, o[2]);
+            r=ps.executeUpdate();
+        } catch (Exception e) {
+        }
+        return r;
     }
 
     @Override
     public int actualizar(Object[] o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int r = 0;
+        String sql = "update CATEGORIA_PRODUCTO set NOMBRE_CATEGORIA=?, DESCRIPCION_CATEGORIA=? WHERE ID_CATEGORIA_PRODUCTO=?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setObject(1, o[1]);
+            ps.setObject(2, o[2]);
+            ps.setObject(3, o[0]);
+            r = ps.executeUpdate();
+        } catch (Exception e) {
+        }
+        return r;
     }
 
     @Override
     public void eliminar(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "delete from CATEGORIA_PRODUCTO where ID_CATEGORIA_PRODUCTO=?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, id);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
     }
     
 }
