@@ -6,13 +6,17 @@
 package bluemoon.dao;
 
 import bluemoon.model.Conexion;
+import bluemoon.model.FacturaCompra;
 import bluemoon.model.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 
-public class UsuarioDao {
+public class UsuarioDao implements CRUD{
     PreparedStatement ps;
     ResultSet rs;
     
@@ -39,4 +43,49 @@ public class UsuarioDao {
         }
         return user;
     }
+
+    @Override
+    public List listar() {
+        List<Usuario> lista = new ArrayList<>();
+        String sql ="SELECT * FROM Usuario";
+        try{
+            //con = cn.getConexion();
+            ps=con.prepareStatement(sql);
+            rs=ps.executeQuery();
+            while(rs.next()){
+                Usuario us = new Usuario();
+                us.setIdUser(rs.getString(1));
+                us.setNombreUser(rs.getString(2));
+                us.setPasswordUser(rs.getString(3));
+                us.setEmailUser(rs.getString(4));
+                us.setTipoUser(rs.getString(5));
+                us.setIdPersonal(rs.getString(6));
+                
+                lista.add(us);
+            }
+            
+        }catch(SQLException e){
+            
+        }
+        return lista;
+    
+    
+    }
+
+    @Override
+    public int agregar(Object o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int actualizar(Object o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void eliminar(String id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
 }
