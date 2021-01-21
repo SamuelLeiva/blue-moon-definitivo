@@ -20,6 +20,10 @@ public class Restaurante {
         this.descripcion = descripcion;
     }
 
+    public Restaurante(){
+        
+    }
+    
     public String getIdRestaurante() {
         return idRestaurante;
     }
