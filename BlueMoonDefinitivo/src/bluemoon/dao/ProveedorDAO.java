@@ -49,17 +49,67 @@ public class ProveedorDAO implements CRUD{
     }
 
     @Override
-    public int agregar(Object o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int agregar(Object[] o) {
+        int r=0;
+        String myId = "";
+        String sqlIdentifier = "SELECT NEXT VALUE FOR SEQ_PROVEEDOR;";
+        try {
+            PreparedStatement pst = con.prepareStatement(sqlIdentifier);
+            ResultSet rsId = pst.executeQuery();
+            if(rsId.next()){
+                myId = "BMPRO-0" + rs.getInt(1);
+            }else{
+                myId = "BMPRO-10000";
+            }
+        } catch (Exception e) {
+        }
+        
+        String sql = "INSERT INTO PROVEEDOR VALUES (?,?,?,?,?)";
+        try{
+            con = cn.getConexion();
+            ps = con.prepareStatement(sql);
+            ps.setObject(1,o[0]);
+            ps.setObject(2,o[1]);
+            ps.setObject(3,o[2]);
+            ps.setObject(4,o[3]);
+            ps.setObject(5,o[4]);
+            r=ps.executeUpdate();
+        }catch(SQLException e){
+            
+        }
+        return r;
     }
 
     @Override
-    public int actualizar(Object o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int actualizar(Object[] o) {
+        int r=0;
+        String sql = "UPDATE PROVEEDOR SET RUC_PROVEEDOR=?,NOMBRE_PROVEEDOR=?,DIRECCION_PROVEEDOR=?,TELEFONO_PROVEEDOR=? WHERE ID_PROVEEDOR=?";
+        try{
+            con = cn.getConexion();
+            ps = con.prepareStatement(sql);
+            ps.setObject(1,o[0]);
+            ps.setObject(2,o[1]);
+            ps.setObject(3,o[2]);
+            ps.setObject(4,o[3]);
+            ps.setObject(5,o[4]);
+            r=ps.executeUpdate();
+        }catch(SQLException e){
+            
+        }
+        return r;
+    
     }
 
     @Override
     public void eliminar(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql="DELETE FROM PROVEEDOR WHERE ID_PROVEEDOR=?";
+        try{
+            con = cn.getConexion();
+            ps = con.prepareStatement(sql);
+            ps.setString(1,id);
+            ps.executeUpdate();
+        }catch(SQLException e){
+            
+        }
     }
 }

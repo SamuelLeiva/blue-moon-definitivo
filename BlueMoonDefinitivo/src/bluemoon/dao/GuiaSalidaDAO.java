@@ -45,18 +45,63 @@ public class GuiaSalidaDAO implements CRUD{
     }
 
     @Override
-    public int agregar(Object o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public int agregar(Object[] o) {
+        int r=0;
+        String myId = "";
+        String sqlIdentifier = "SELECT NEXT VALUE FOR SEQ_GUIA_SALIDA;";
+        try {
+            PreparedStatement pst = con.prepareStatement(sqlIdentifier);
+            ResultSet rsId = pst.executeQuery();
+            if(rsId.next()){
+                myId = "BMCATB-0" + rs.getInt(1);
+            }else{
+                myId = "BMCATB-10000";
+            }
+        } catch (Exception e) {
+        }
+        
+        String sql = "INSERT INTO GUIA_SALIDA VALUES (?,?,?)";
+        try{
+            con = cn.getConexion();
+            ps = con.prepareStatement(sql);
+            ps.setObject(1,o[0]);
+            ps.setObject(2,o[1]);
+            ps.setObject(3,o[2]);
+            r=ps.executeUpdate();
+        }catch(SQLException e){
+            
+        }
+        return r;
+        }
 
     @Override
-    public int actualizar(Object o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public int actualizar(Object[] o) {
+        int r=0;
+        String sql = "UPDATE GUIA_SALIDA SET FECHA=?,OBSERVACIONES=? WHERE ID_GUIA_SALIDA=?";
+        try{
+            con = cn.getConexion();
+            ps = con.prepareStatement(sql);
+            ps.setObject(1,o[1]);
+            ps.setObject(2,o[2]);
+            ps.setObject(3,o[0]);
+            r=ps.executeUpdate();
+        }catch(SQLException e){
+            
+        }
+        return r;}
 
     @Override
     public void eliminar(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql="DELETE FROM GUIA_SALIDA WHERE ID_GUIA_SALIDA=?";
+        try{
+            con = cn.getConexion();
+            ps = con.prepareStatement(sql);
+            ps.setString(1,id);
+            ps.executeUpdate();
+        }catch(SQLException e){
+            
+        }
+    
     }
     
 }
