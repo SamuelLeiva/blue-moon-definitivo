@@ -58,9 +58,9 @@ public class FacturaCompraDAO implements CRUD{
             PreparedStatement pst = con.prepareStatement(sqlIdentifier);
             ResultSet rsId = pst.executeQuery();
             if(rsId.next()){
-                myId = "BMCATB-0" + rs.getInt(1);
+                myId = "BMFAC-0" + rs.getInt(1);
             }else{
-                myId = "BMCATB-10000";
+                myId = "BMFAC-10000";
             }
         } catch (Exception e) {
         }

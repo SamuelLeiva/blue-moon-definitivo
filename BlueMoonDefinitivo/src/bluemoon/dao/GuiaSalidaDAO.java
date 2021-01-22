@@ -53,9 +53,9 @@ public class GuiaSalidaDAO implements CRUD{
             PreparedStatement pst = con.prepareStatement(sqlIdentifier);
             ResultSet rsId = pst.executeQuery();
             if(rsId.next()){
-                myId = "BMCATB-0" + rs.getInt(1);
+                myId = "BMGS-0" + rs.getInt(1);
             }else{
-                myId = "BMCATB-10000";
+                myId = "BMGS-10000";
             }
         } catch (Exception e) {
         }

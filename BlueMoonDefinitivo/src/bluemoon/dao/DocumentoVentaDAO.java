@@ -59,9 +59,9 @@ public class DocumentoVentaDAO implements CRUD{
             PreparedStatement pst = con.prepareStatement(sqlIdentifier);
             ResultSet rsId = pst.executeQuery();
             if(rsId.next()){
-                myId = "BMCATB-0" + rs.getInt(1);
+                myId = "BMDOCV-0" + rs.getInt(1);
             }else{
-                myId = "BMCATB-10000";
+                myId = "BMDOCV-10000";
             }
         } catch (Exception e) {
         }
