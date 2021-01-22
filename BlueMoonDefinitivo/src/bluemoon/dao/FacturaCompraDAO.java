@@ -7,7 +7,6 @@ package bluemoon.dao;
 
 import bluemoon.model.Conexion;
 import bluemoon.model.FacturaCompra;
-import bluemoon.model.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,80 +15,59 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class UsuarioDao implements CRUD{
+public class FacturaCompraDAO implements CRUD{
+
+    Connection con;
+    Conexion cn=new Conexion();
     PreparedStatement ps;
     ResultSet rs;
     
-    Usuario user = new Usuario();
-    Connection con = Conexion.getConexion();
-    
-    public Usuario ValidarUsuario(String email, String password){
-        String sql = "select * from usuario where EMAIL_USUARIO=? AND CONTRASEÑA_USUARIO=?";
-        try {
-            ps = con.prepareStatement(sql);
-            ps.setString(1, email);
-            ps.setString(2, password);
-            rs = ps.executeQuery();
-            
-            while(rs.next()){ //construimos el usuario
-                user.setIdUser(rs.getString(1));
-                user.setNombreUser(rs.getString(2));
-                user.setPasswordUser(rs.getString(3));
-                user.setEmailUser(rs.getString(4));
-                user.setTipoUser(rs.getString(5));
-                user.setIdPersonal(rs.getString(6));
-            }
-        } catch (Exception e) {
-        }
-        return user;
-    }
-
     @Override
     public List listar() {
-        List<Usuario> lista = new ArrayList<>();
-        String sql ="SELECT * FROM Usuario";
+        List<FacturaCompra> lista = new ArrayList<>();
+        String sql ="SELECT * FROM FACTURA_COMPRA";
         try{
-            //con = cn.getConexion();
+            con = cn.getConexion();
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while(rs.next()){
-                Usuario us = new Usuario();
-                us.setIdUser(rs.getString(1));
-                us.setNombreUser(rs.getString(2));
-                us.setPasswordUser(rs.getString(3));
-                us.setEmailUser(rs.getString(4));
-                us.setTipoUser(rs.getString(5));
-                us.setIdPersonal(rs.getString(6));
+                FacturaCompra fc = new FacturaCompra();
+                fc.setIdProveedor(rs.getString(1));
+                fc.setIdFacturaCompra(rs.getString(2));
+                fc.setFechaFactCompra(rs.getDate(3));
+                fc.setIgv(rs.getDouble(4));
+                fc.setSubtotalFactCompra(rs.getDouble(5));
+                fc.setTotalFactCompra(rs.getDouble(6));
+                fc.setObsFacturaCompra(rs.getString(7));
                 
-                lista.add(us);
+                lista.add(fc);
             }
             
         }catch(SQLException e){
             
         }
         return lista;
-    
-    
     }
 
     @Override
     public int agregar(Object[] o) {
         int r=0;
         String myId = "";
-        String sqlIdentifier = "SELECT NEXT VALUE FOR SEQ_USUARIO;";
+        String sqlIdentifier = "SELECT NEXT VALUE FOR seq_factura_compra;";
         try {
             PreparedStatement pst = con.prepareStatement(sqlIdentifier);
             ResultSet rsId = pst.executeQuery();
             if(rsId.next()){
-                myId = "BMUSU-0" + rs.getInt(1);
+                myId = "BMFAC-0" + rs.getInt(1);
             }else{
-                myId = "BMUSU-10000";
+                myId = "BMFAC-10000";
             }
         } catch (Exception e) {
         }
         
-        String sql = "INSERT INTO USUARIO VALUES (?,?,?,?,?,?)";
+        String sql = "INSERT INTO FACTURA_COMPRA VALUES (?,?,?,?,?,?,?)";
         try{
+            con = cn.getConexion();
             ps = con.prepareStatement(sql);
             ps.setObject(1,o[0]);
             ps.setObject(2,o[1]);
@@ -97,25 +75,30 @@ public class UsuarioDao implements CRUD{
             ps.setObject(4,o[3]);
             ps.setObject(5,o[4]);
             ps.setObject(6,o[5]);
+            ps.setObject(7,o[6]);
             r=ps.executeUpdate();
         }catch(SQLException e){
             
         }
         return r;
+    
+    
     }
 
     @Override
     public int actualizar(Object[] o) {
         int r=0;
-        String sql = "UPDATE USUARIO SET NOMBRE_USUARIO=?,CONTRASEÑA_USUARIO=?,EMAIL_USUARIO=?,TIPO_USUARIO=?,ID_PERSONAL=? WHERE ID_USUARIO=?";
+        String sql = "UPDATE FACTURA_COMPRA SET ID_PROVEEDOR=?,FECHA=?,IGV=?,SUBTOTAL=?,TOTAL_FACTURA=?,OBSERVACIONES=? WHERE ID_FACTURA_COMPRA=?";
         try{
+            con = cn.getConexion();
             ps = con.prepareStatement(sql);
-            ps.setObject(1,o[1]);
+            ps.setObject(1,o[0]);
             ps.setObject(2,o[2]);
             ps.setObject(3,o[3]);
             ps.setObject(4,o[4]);
             ps.setObject(5,o[5]);
-            ps.setObject(6,o[0]);
+            ps.setObject(6,o[6]);
+            ps.setObject(7,o[1]);
             r=ps.executeUpdate();
         }catch(SQLException e){
             
@@ -126,9 +109,9 @@ public class UsuarioDao implements CRUD{
 
     @Override
     public void eliminar(String id) {
-        String sql="DELETE FROM USUARIO WHERE ID_USUARIO=?";
+        String sql="DELETE FROM DOCUMENTO_VENTA WHERE ID_DOCUMENTO_VENTA=?";
         try{
-            
+            con = cn.getConexion();
             ps = con.prepareStatement(sql);
             ps.setString(1,id);
             ps.executeUpdate();
@@ -136,8 +119,6 @@ public class UsuarioDao implements CRUD{
             
         }
     
-    
     }
-    
     
 }

@@ -15,17 +15,27 @@ public class Pedido {
     double totalPedido;
     Date fechaPedido;
     String estadoPedido;
+    String idCliente;
 
-    public Pedido(String idPersonal, String idPedido, String idMesa, double totalPedido, Date fechaPedido, String estadoPedido) {
+    public Pedido(String idPersonal, String idPedido, String idMesa, double totalPedido, Date fechaPedido, String estadoPedido,String idCliente) {
         this.idPersonal = idPersonal;
         this.idPedido = idPedido;
         this.idMesa = idMesa;
         this.totalPedido = totalPedido;
         this.fechaPedido = fechaPedido;
         this.estadoPedido = estadoPedido;
+        this.idCliente = idCliente;
     }
 
     public Pedido() {
+    }
+
+    public String getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(String idCliente) {
+        this.idCliente = idCliente;
     }
 
     public String getIdPersonal() {
