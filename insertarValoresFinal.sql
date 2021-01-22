@@ -1,7 +1,10 @@
 use bluemoondefinitivo;
+ALTER TABLE sede
+ALTER COLUMN direccion_sede TEXT;
 
+use bluemoondefinitivo;
+insert into SEDE values('BM-01', 'Lince', 'Jr. Brigadier Mateo Pumacahua 2520', '4701631','bluemoon@gmail.com');
 
-insert into SEDE values('BM-01', 'Lince', 'Jr. Brigadier Mateo Pumacahua 2520, Lince, Lima', 4701631,'bluemoon@gmail.com');
 
 use bluemoondefinitivo;
 insert into ALMACEN VALUES('BM-01','BMA-01', 'Almacén de Lince');
@@ -47,10 +50,10 @@ INSERT INTO MESA VALUES('BMM-20', 8);
 
 --tabla cliente (PONER SECUENCIA)
 use bluemoondefinitivo;
-INSERT INTO CLIENTE VALUES('BMCLI-0'+Convert(varchar(20),next value for seq_cliente), '78596214','Carlos Marx','Huaman Gomez',987455622,'C123456', 'Jr Eleazar Blanco 260');
-INSERT INTO CLIENTE VALUES('BMCLI-0'+Convert(varchar(20),next value for seq_cliente), '84596321','Ana María','Lopez Lopez',998457621, 'C784596', 'Jr Cristoval 260');
-INSERT INTO CLIENTE VALUES('BMCLI-0'+Convert(varchar(20),next value for seq_cliente), '56328994','Juan Pablo','Sagasti Solange',999655368, 'C784215', 'Jr Combate de Angamos 480');
-INSERT INTO CLIENTE VALUES('BMCLI-0'+Convert(varchar(20),next value for seq_cliente), '45589966','Inti Bryan','Quispe Ramirez',997855621, 'C365289', 'Jr Iquique 181');
+INSERT INTO CLIENTE VALUES('BMCLI-0'+Convert(varchar(20),next value for seq_cliente), '78596214','Carlos Marx','Huaman Gomez','987455622','C123456', 'Jr Eleazar Blanco 260');
+INSERT INTO CLIENTE VALUES('BMCLI-0'+Convert(varchar(20),next value for seq_cliente), '84596321','Ana María','Lopez Lopez','998457621', 'C784596', 'Jr Cristoval 260');
+INSERT INTO CLIENTE VALUES('BMCLI-0'+Convert(varchar(20),next value for seq_cliente), '56328994','Juan Pablo','Sagasti Solange','999655368', 'C784215', 'Jr Combate de Angamos 480');
+INSERT INTO CLIENTE VALUES('BMCLI-0'+Convert(varchar(20),next value for seq_cliente), '45589966','Inti Bryan','Quispe Ramirez','997855621', 'C365289', 'Jr Iquique 181');
 
 use bluemoondefinitivo;
 select * from cliente;
@@ -81,10 +84,10 @@ insert into CATEGORIA_BEBIDA values('BMCATB-08','Cocktail peruano','Activo',null
 
 --tabla proveedor(poner secuencia)
 use bluemoondefinitivo;
-insert into PROVEEDOR values('BMPRO-0'+Convert(varchar(20),next value for seq_proveedor), 'P1001587975', 'Caryder','Av. Las Palmeras 980', 3263613);
-insert into PROVEEDOR values('BMPRO-0'+Convert(varchar(20),next value for seq_proveedor), 'A1234567490', 'Zedina','Av. Universitaria 1055', 989357785);
-insert into PROVEEDOR values('BMPRO-0'+Convert(varchar(20),next value for seq_proveedor), 'J78945867238', 'Panots','Calle Narciso de la Colina 320', 4859784);
-insert into PROVEEDOR values('BMPRO-0'+Convert(varchar(20),next value for seq_proveedor), 'Y78965674121', 'Il Pastificio','Av. Roosevelt 5646', 978451236);
+insert into PROVEEDOR values('BMPRO-0'+Convert(varchar(20),next value for seq_proveedor), 'P1001587975', 'Caryder','Av. Las Palmeras 980', '3263613');
+insert into PROVEEDOR values('BMPRO-0'+Convert(varchar(20),next value for seq_proveedor), 'A1234567490', 'Zedina','Av. Universitaria 1055', '989357785');
+insert into PROVEEDOR values('BMPRO-0'+Convert(varchar(20),next value for seq_proveedor), 'J78945867238', 'Panots','Calle Narciso de la Colina 320', '4859784');
+insert into PROVEEDOR values('BMPRO-0'+Convert(varchar(20),next value for seq_proveedor), 'Y78965674121', 'Il Pastificio','Av. Roosevelt 5646', '978451236');
 
 --- tabla plato(poner secuencia)
 use bluemoondefinitivo;
@@ -220,20 +223,20 @@ insert into PLATO values ('BMPLA-0'+Convert(varchar(20),next value for seq_plato
 
 --tabla personal(poner secuencia)
 use bluemoondefinitivo; 
-insert into PERSONAL values('BMC-09','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),78455487,'Maximo','Diaz',996587455,'diazmozo@outlook.com','BM-01');
-insert into PERSONAL values('BMC-09','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),78881524,'Marino','Perez',997854321,'marinomozo@outlook.com','BM-01');
-insert into PERSONAL values('BMC-09','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),65263321,'Juan','Flores',984777326,'juanmozo@outlook.com','BM-01');
-insert into PERSONAL values('BMC-09','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),54886955,'Pablo','Ramirez',993588644,'pablomozo@outlook.com','BM-01');
-insert into PERSONAL values('BMC-09','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),84523621,'Miguel','Alfaro',949328654,'miguelmozo@outlook.com','BM-01');
-insert into PERSONAL values('BMC-08','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),88754966,'Neyder','Cordoba',988599688,'neyderbarman@gmail.com','BM-01');
-insert into PERSONAL values('BMC-08','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),78556599,'Edil','Cordoba',985654558,'edilbarman@gmail.com','BM-01');
-insert into PERSONAL values('BMC-07','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),77776666,'Jorge','Chavez',997422321,'jorgeadmin@gmail.com','BM-01');
-insert into PERSONAL values('BMC-10','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),77778455,'Isabel','Quispe',988566662,'isabelcaja@gmail.com','BM-01');
-insert into PERSONAL values('BMC-10','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),78889548,'Carmen','Sandiego',999988745,'carmencaja@gmail.com','BM-01');
-insert into PERSONAL values('BMC-03','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),58886544,'Remi','Cori',915168123,'remichefx@gmail.com','BM-01');
-insert into PERSONAL values('BMC-01','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),77779559,'Santino','Baletta',999784488,'santinoadmin@gmail.com','BM-01');
-insert into PERSONAL values('BMC-12','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),78459888,'Mario','Parma',999995865,'jefealmacen@gmail.com','BM-01');
-insert into PERSONAL values('BMC-13','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),45456869,'Luigi','Corleone',991443586,'asistalmacen@gmail.com','BM-01');
+insert into PERSONAL values('BMC-09','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),'78455487','Maximo','Diaz','996587455','diazmozo@outlook.com','BM-01');
+insert into PERSONAL values('BMC-09','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),'78881524','Marino','Perez','997854321','marinomozo@outlook.com','BM-01');
+insert into PERSONAL values('BMC-09','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),'65263321','Juan','Flores','984777326','juanmozo@outlook.com','BM-01');
+insert into PERSONAL values('BMC-09','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),'54886955','Pablo','Ramirez','993588644','pablomozo@outlook.com','BM-01');
+insert into PERSONAL values('BMC-09','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),'84523621','Miguel','Alfaro','949328654','miguelmozo@outlook.com','BM-01');
+insert into PERSONAL values('BMC-08','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),'88754966','Neyder','Cordoba','988599688','neyderbarman@gmail.com','BM-01');
+insert into PERSONAL values('BMC-08','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),'78556599','Edil','Cordoba','985654558','edilbarman@gmail.com','BM-01');
+insert into PERSONAL values('BMC-07','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),'77776666','Jorge','Chavez','997422321','jorgeadmin@gmail.com','BM-01');
+insert into PERSONAL values('BMC-10','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),'77778455','Isabel','Quispe','988566662','isabelcaja@gmail.com','BM-01');
+insert into PERSONAL values('BMC-10','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),'78889548','Carmen','Sandiego','999988745','carmencaja@gmail.com','BM-01');
+insert into PERSONAL values('BMC-03','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),'58886544','Remi','Cori','915168123','remichefx@gmail.com','BM-01');
+insert into PERSONAL values('BMC-01','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),'77779559','Santino','Baletta','999784488','santinoadmin@gmail.com','BM-01');
+insert into PERSONAL values('BMC-12','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),'78459888','Mario','Parma','999995865','jefealmacen@gmail.com','BM-01');
+insert into PERSONAL values('BMC-13','BMPERSONAL-0'+Convert(varchar(20),next value for seq_personal),'45456869','Luigi','Corleone','991443586','asistalmacen@gmail.com','BM-01');
 
 --tabla usuario(poner secuencia)
 use bluemoondefinitivo;

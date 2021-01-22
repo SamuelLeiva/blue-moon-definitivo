@@ -26,10 +26,10 @@ public class ClienteDao implements CRUD{
             while(rs.next()){
                 Cliente beb = new Cliente();
                 beb.setClienteId(rs.getString(1));
-                beb.setDni(rs.getInt(2));
+                beb.setDni(rs.getString(2));
                 beb.setNombre(rs.getString(3));
                 beb.setApellido(rs.getString(4));
-                beb.setTelefono(rs.getInt(5));
+                beb.setTelefono(rs.getString(5));
                 beb.setRuc(rs.getString(6));
                 beb.setDireccion(rs.getString(7));
                 lista.add(beb);

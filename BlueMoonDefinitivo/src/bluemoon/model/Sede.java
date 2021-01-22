@@ -12,10 +12,10 @@ public class Sede {
     String idSede;
     String nombreSede;
     String direccionSede;
-    int telefonoSede;
+    String telefonoSede;
     String emailSede;
     
-    public Sede(String idRestaurante, String idSede, String nombreSede, String direccionSede, int telefonoSede, String emailSede) {
+    public Sede(String idRestaurante, String idSede, String nombreSede, String direccionSede, String telefonoSede, String emailSede) {
         this.idRestaurante = idRestaurante;
         this.idSede = idSede;
         this.nombreSede = nombreSede;
@@ -60,11 +60,11 @@ public class Sede {
         this.direccionSede = direccionSede;
     }
 
-    public int getTelefonoSede() {
+    public String getTelefonoSede() {
         return telefonoSede;
     }
 
-    public void setTelefonoSede(int telefonoSede) {
+    public void setTelefonoSede(String telefonoSede) {
         this.telefonoSede = telefonoSede;
     }
 

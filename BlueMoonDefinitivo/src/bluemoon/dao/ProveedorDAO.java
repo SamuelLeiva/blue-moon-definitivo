@@ -36,7 +36,7 @@ public class ProveedorDAO implements CRUD{
                 prov.setRucProveedor(rs.getString(2));
                 prov.setNombreProveedor(rs.getString(3));
                 prov.setDireccionProveedor(rs.getString(4));
-                prov.setTelefonoProveedor(rs.getInt(5));
+                prov.setTelefonoProveedor(rs.getString(5));
                 
                 lista.add(prov);
             }

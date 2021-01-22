@@ -34,10 +34,10 @@ public class PersonalDAO implements CRUD{
                 Personal per = new Personal();
                 per.setIdCargo(rs.getString(1));
                 per.setIdPersonal(rs.getString(2));
-                per.setDniPersonal(rs.getInt(3));
+                per.setDniPersonal(rs.getString(3));
                 per.setNombrePersonal(rs.getString(4));
                 per.setApellidoPersonal(rs.getString(5));
-                per.setTelefonoPersonal(rs.getInt(6));
+                per.setTelefonoPersonal(rs.getString(6));
                 per.setEmailPersonal(rs.getString(7));
                 per.setIdSede(rs.getString(8));
                 lista.add(per);

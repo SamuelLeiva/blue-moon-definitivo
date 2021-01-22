@@ -4,8 +4,8 @@ use bluemoondefinitivo;
 
 CREATE TABLE ALMACEN
 ( 
-	ID_SEDE              varchar(20)  NOT NULL ,
-	ID_ALMACEN           varchar(20)  NOT NULL ,
+	ID_SEDE              char(15)  NOT NULL ,
+	ID_ALMACEN           char(15)  NOT NULL ,
 	NOMBRE_ALMACEN       varchar(40)  NOT NULL 
 )
 go
@@ -20,11 +20,11 @@ go
 
 CREATE TABLE BEBIDA
 ( 
-	ID_BEBIDA            varchar(20)  NOT NULL ,
+	ID_BEBIDA            char(15)  NOT NULL ,
 	NOMBRE_BEBIDA        varchar(40)  NOT NULL ,
-	DESCRIPCION_BEBIDA   varchar(150)  NULL ,
+	DESCRIPCION_BEBIDA   text  NULL ,
 	PRECIO_BEBIDA        numeric(8,2)  NOT NULL ,
-	ID_CATEGORIA_BEBIDA  varchar(20)  NULL 
+	ID_CATEGORIA_BEBIDA  char(15)  NULL 
 )
 go
 
@@ -38,7 +38,7 @@ go
 
 CREATE TABLE CARGO
 ( 
-	ID_CARGO             varchar(20)  NOT NULL ,
+	ID_CARGO             char(15)  NOT NULL ,
 	NOMBRE_CARGO         varchar(30)  NOT NULL ,
 	DESCRIPCION_CARGO    varchar(150)  NULL 
 )
@@ -54,10 +54,10 @@ go
 
 CREATE TABLE CATEGORIA_BEBIDA
 ( 
-	ID_CATEGORIA_BEBIDA  varchar(20)  NOT NULL ,
+	ID_CATEGORIA_BEBIDA  char(15)  NOT NULL ,
 	NOMBRE               varchar(20)  NULL ,
 	ESTADO               varchar(20)  NULL ,
-	DESCRIPCION          varchar(50)  NULL 
+	DESCRIPCION          text  NULL 
 )
 go
 
@@ -71,9 +71,9 @@ go
 
 CREATE TABLE CATEGORIA_PLATO
 ( 
-	ID_CATEGORIA_PLATO   varchar(20)  NOT NULL ,
+	ID_CATEGORIA_PLATO   char(15)  NOT NULL ,
 	NOMBRE               varchar(30)  NOT NULL ,
-	DESCRIPCION          varchar(150)  NULL ,
+	DESCRIPCION          text  NULL ,
 	ESTADO               varchar(40)  NULL 
 )
 go
@@ -88,9 +88,9 @@ go
 
 CREATE TABLE CATEGORIA_PRODUCTO
 ( 
-	ID_CATEGORIA         varchar(20)  NOT NULL ,
+	ID_CATEGORIA         char(15)  NOT NULL ,
 	NOMBRE_CATEGORIA     varchar(40)  NOT NULL ,
-	DESCRIPCION_CATEGORIA varchar(150)  NULL 
+	DESCRIPCION_CATEGORIA text  NULL 
 )
 go
 
@@ -104,13 +104,13 @@ go
 
 CREATE TABLE CLIENTE
 ( 
-	ID_CLIENTE           varchar(20)  NOT NULL ,
-	DNI_CLIENTE          integer  NOT NULL ,
+	ID_CLIENTE           char(15)  NOT NULL ,
+	DNI_CLIENTE          varchar(10)  NOT NULL ,
 	NOMBRE_CLIENTE       varchar(40)  NOT NULL ,
 	APELLIDOS_CLIENTE    varchar(40)  NOT NULL ,
-	TELEFONO_CLIENTE     integer  NOT NULL ,
+	TELEFONO_CLIENTE     varchar(12)  NOT NULL ,
 	RUC                  varchar(20)  NULL ,
-	DIRECCION            varchar(30)  NULL 
+	DIRECCION            text  NULL 
 )
 go
 
@@ -126,8 +126,8 @@ CREATE TABLE DET_BEBIDA_PEDIDO
 ( 
 	CANTIDAD             integer  NULL ,
 	PRECIO               numeric(8,2)  NULL ,
-	ID_PEDIDO            varchar(20)  NOT NULL ,
-	ID_BEBIDA            varchar(20)  NOT NULL 
+	ID_PEDIDO            char(15)  NOT NULL ,
+	ID_BEBIDA            char(15)  NOT NULL 
 )
 go
 
@@ -141,8 +141,8 @@ go
 
 CREATE TABLE DET_DOCUMENTO_VENTA
 ( 
-	ID_DOCUMENTO_VENTA   varchar(20)  NOT NULL ,
-	ID_PLATO             varchar(20)  NOT NULL ,
+	ID_DOCUMENTO_VENTA   char(15)  NOT NULL ,
+	ID_PLATO             char(15)  NOT NULL ,
 	PRECIO               numeric(8,2)  NULL ,
 	CANTIDAD             integer  NULL 
 )
@@ -160,8 +160,8 @@ CREATE TABLE DET_FACTURA_COMPRA
 ( 
 	CANTIDAD             integer  NULL ,
 	PRECIO               NUMERIC(8,2)  NULL ,
-	ID_PRODUCTO          varchar(20)  NOT NULL ,
-	ID_FACTURA_COMPRA    varchar(20)  NOT NULL 
+	ID_PRODUCTO          char(15)  NOT NULL ,
+	ID_FACTURA_COMPRA    char(15)  NOT NULL 
 )
 go
 
@@ -176,8 +176,8 @@ go
 CREATE TABLE DET_GUIA_ENTRADA
 ( 
 	CANTIDAD             integer  NULL ,
-	ID_PRODUCTO          varchar(20)  NOT NULL ,
-	ID_GUIA_ENTRADA      varchar(20)  NOT NULL 
+	ID_PRODUCTO          char(15)  NOT NULL ,
+	ID_GUIA_ENTRADA      char(15)  NOT NULL 
 )
 go
 
@@ -191,8 +191,8 @@ go
 
 CREATE TABLE DET_GUIA_SALIDA
 ( 
-	ID_PRODUCTO          varchar(20)  NOT NULL ,
-	ID_GUIA_SALIDA       varchar(20)  NOT NULL ,
+	ID_PRODUCTO          char(15)  NOT NULL ,
+	ID_GUIA_SALIDA       char(15)  NOT NULL ,
 	CANTIDAD             integer  NULL 
 )
 go
@@ -208,8 +208,8 @@ go
 CREATE TABLE DET_INVENTARIO
 ( 
 	CANTIDAD             integer  NOT NULL ,
-	ID_ALMACEN           varchar(20)  NOT NULL ,
-	ID_PRODUCTO          varchar(20)  NOT NULL 
+	ID_ALMACEN           char(15)  NOT NULL ,
+	ID_PRODUCTO          char(15)  NOT NULL 
 )
 go
 
@@ -225,8 +225,8 @@ CREATE TABLE DET_PLATO_PEDIDO
 ( 
 	CANTIDAD             integer  NOT NULL ,
 	PRECIO               numeric(8,2)  NULL ,
-	ID_PEDIDO            varchar(20)  NOT NULL ,
-	ID_PLATO             varchar(20)  NOT NULL 
+	ID_PEDIDO            char(15)  NOT NULL ,
+	ID_PLATO             char(15)  NOT NULL 
 )
 go
 
@@ -240,12 +240,12 @@ go
 
 CREATE TABLE DOCUMENTO_VENTA
 ( 
-	ID_DOCUMENTO_VENTA   varchar(20)  NOT NULL ,
+	ID_DOCUMENTO_VENTA   char(15)  NOT NULL ,
 	TOTAL                numeric(8,2)  NOT NULL ,
 	FECHA                datetime  NOT NULL ,
 	SUBTOTAL             numeric(8,2)  NOT NULL ,
-	ID_PERSONAL          varchar(20)  NOT NULL ,
-	ID_CLIENTE           varchar(20)  NOT NULL ,
+	ID_PERSONAL          char(15)  NOT NULL ,
+	ID_CLIENTE           char(15)  NOT NULL ,
 	IGV                  numeric(8,2)  NOT NULL ,
 	TIPO_DOCUMENTO       varchar(30)  NULL 
 )
@@ -261,12 +261,12 @@ go
 
 CREATE TABLE FACTURA_COMPRA
 ( 
-	ID_PROVEEDOR         varchar(20)  NULL ,
-	ID_FACTURA_COMPRA    varchar(20)  NOT NULL ,
+	ID_PROVEEDOR         char(15)  NULL ,
+	ID_FACTURA_COMPRA    char(15)  NOT NULL ,
 	FECHA                datetime  NOT NULL ,
-	IGV                  numeric(5,2)  NOT NULL ,
-	SUBTOTAL             numeric(12,2)  NOT NULL ,
-	TOTAL_FACTURA        numeric(12,2)  NOT NULL ,
+	IGV                  numeric(8,2)  NOT NULL ,
+	SUBTOTAL             numeric(8,2)  NOT NULL ,
+	TOTAL_FACTURA        numeric(8,2)  NOT NULL ,
 	OBSERVACIONES        varchar(50)  NULL 
 )
 go
@@ -281,11 +281,11 @@ go
 
 CREATE TABLE GUIA_ENTRADA
 ( 
-	ID_GUIA_ENTRADA      varchar(20)  NOT NULL ,
+	ID_GUIA_ENTRADA      char(15)  NOT NULL ,
 	FECHA                datetime  NOT NULL ,
-	OBSERVACIONES        varchar(40)  NULL ,
-	ID_PROVEEDOR         varchar(20)  NOT NULL ,
-	ID_FACTURA_COMPRA    varchar(20)  NOT NULL 
+	OBSERVACIONES        text  NULL ,
+	ID_PROVEEDOR         char(15)  NOT NULL ,
+	ID_FACTURA_COMPRA    char(15)  NOT NULL 
 )
 go
 
@@ -299,9 +299,9 @@ go
 
 CREATE TABLE GUIA_SALIDA
 ( 
-	ID_GUIA_SALIDA       varchar(20)  NOT NULL ,
+	ID_GUIA_SALIDA       char(15)  NOT NULL ,
 	FECHA                datetime  NULL ,
-	OBSERVACIONES        varchar(50)  NULL 
+	OBSERVACIONES        text  NULL 
 )
 go
 
@@ -315,7 +315,7 @@ go
 
 CREATE TABLE MESA
 ( 
-	ID_MESA              varchar(20)  NOT NULL ,
+	ID_MESA              char(15)  NOT NULL ,
 	CAPACIDAD            integer  NOT NULL 
 )
 go
@@ -330,13 +330,13 @@ go
 
 CREATE TABLE PEDIDO
 ( 
-	ID_PERSONAL          varchar(20)  NOT NULL ,
-	ID_PEDIDO            varchar(20)  NOT NULL ,
-	ID_MESA              varchar(20)  NULL ,
+	ID_PERSONAL          char(15)  NOT NULL ,
+	ID_PEDIDO            char(15)  NOT NULL ,
+	ID_MESA              char(15)  NULL ,
 	TOTAL_PEDIDO         numeric(8,2)  NOT NULL ,
 	FECHA_PEDIDO         datetime  NOT NULL ,
 	ESTADO_PEDIDO        varchar(20)  NOT NULL ,
-	ID_CLIENTE           varchar(20)  NULL 
+	ID_CLIENTE           char(15)  NULL 
 )
 go
 
@@ -350,9 +350,9 @@ go
 
 CREATE TABLE PEDIDO_COMPRA
 ( 
-	ID_PEDIDO_COMPRA     varchar(20)  NOT NULL ,
-	ID_PROVEEDOR         varchar(20)  NULL ,
-	ID_PRODUCTO          varchar(20)  NULL ,
+	ID_PEDIDO_COMPRA     char(15)  NOT NULL ,
+	ID_PROVEEDOR         char(15)  NULL ,
+	ID_PRODUCTO          char(15)  NULL ,
 	PRECIO               numeric(8,2)  NULL ,
 	CANTIDAD             integer  NULL 
 )
@@ -368,14 +368,14 @@ go
 
 CREATE TABLE PERSONAL
 ( 
-	ID_CARGO             varchar(20)  NOT NULL ,
-	ID_PERSONAL          varchar(20)  NOT NULL ,
-	DNI_PERSONAL         integer  NOT NULL ,
+	ID_CARGO             char(15)  NOT NULL ,
+	ID_PERSONAL          char(15)  NOT NULL ,
+	DNI_PERSONAL         varchar(10)  NOT NULL ,
 	NOMBRE_PERSONAL      varchar(50)  NOT NULL ,
 	APELLIDO_PERSONAL    varchar(50)  NOT NULL ,
-	TELEFONO_PERSONAL    integer  NOT NULL ,
+	TELEFONO_PERSONAL    varchar(12)  NOT NULL ,
 	EMAIL_PERSONAL       varchar(30)  NULL ,
-	ID_SEDE              varchar(20)  NOT NULL 
+	ID_SEDE              char(15)  NOT NULL 
 )
 go
 
@@ -389,11 +389,11 @@ go
 
 CREATE TABLE PLATO
 ( 
-	ID_PLATO             varchar(20)  NOT NULL ,
-	ID_CATEGORIA_PLATO   varchar(20)  NULL ,
+	ID_PLATO             char(15)  NOT NULL ,
+	ID_CATEGORIA_PLATO   char(15)  NULL ,
 	NOMBRE_PLATO         varchar(50)  NOT NULL ,
 	PRECIO_PLATO         numeric(8,2)  NOT NULL ,
-	DESCRIPCION_PLATO    varchar(150)  NULL 
+	DESCRIPCION_PLATO    text  NULL 
 )
 go
 
@@ -407,10 +407,10 @@ go
 
 CREATE TABLE PRODUCTO
 ( 
-	ID_PRODUCTO          varchar(20)  NOT NULL ,
+	ID_PRODUCTO          char(15)  NOT NULL ,
 	NOMBRE_PRODUCTO      varchar(40)  NOT NULL ,
 	UNIDAD_MEDIDA        varchar(20)  NOT NULL ,
-	ID_CATEGORIA         varchar(20)  NULL ,
+	ID_CATEGORIA         char(15)  NULL ,
 	PRECIO_UNITARIO      numeric(8,2)  NOT NULL ,
 	CANTIDAD_PRODUCTO    integer  NOT NULL 
 )
@@ -426,11 +426,11 @@ go
 
 CREATE TABLE PROVEEDOR
 ( 
-	ID_PROVEEDOR         varchar(20)  NOT NULL ,
+	ID_PROVEEDOR         char(15)  NOT NULL ,
 	RUC_PROVEEDOR        varchar(30)  NOT NULL ,
 	NOMBRE_PROVEEDOR     varchar(40)  NOT NULL ,
-	DIRECCION_PROVEEDOR  varchar(50)  NOT NULL ,
-	TELEFONO_PROVEEDOR   integer  NOT NULL 
+	DIRECCION_PROVEEDOR  text  NOT NULL ,
+	TELEFONO_PROVEEDOR   varchar(15)  NOT NULL 
 )
 go
 
@@ -444,11 +444,11 @@ go
 
 CREATE TABLE SEDE
 ( 
-	ID_SEDE              varchar(20)  NOT NULL ,
-	NOMBRE_SEDE          varchar(40)  NOT NULL ,
-	DIRECCION_SEDE       varchar(50)  NOT NULL ,
-	TELEFONO_SEDE        integer  NOT NULL ,
-	EMAIL_SEDE           varchar(30)  NOT NULL 
+	ID_SEDE              char(15)  NOT NULL ,
+	NOMBRE_SEDE          varchar(15)  NOT NULL ,
+	DIRECCION_SEDE       text  NOT NULL ,
+	TELEFONO_SEDE        varchar(12)  NOT NULL ,
+	EMAIL_SEDE           text  NOT NULL 
 )
 go
 
@@ -462,12 +462,12 @@ go
 
 CREATE TABLE USUARIO
 ( 
-	ID_USUARIO           varchar(20)  NOT NULL ,
+	ID_USUARIO           char(15)  NOT NULL ,
 	NOMBRE_USUARIO       varchar(40)  NOT NULL ,
 	CONTRASEÑA_USUARIO   varchar(30)  NOT NULL ,
 	EMAIL_USUARIO        varchar(30)  NOT NULL ,
 	TIPO_USUARIO         varchar(20)  NULL ,
-	ID_PERSONAL          varchar(20)  NOT NULL 
+	ID_PERSONAL          char(15)  NOT NULL 
 )
 go
 
@@ -755,4 +755,3 @@ ALTER TABLE USUARIO
 		ON DELETE NO ACTION
 		ON UPDATE NO ACTION
 go
-

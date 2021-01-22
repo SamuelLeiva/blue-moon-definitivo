@@ -9,14 +9,14 @@ package bluemoon.model;
 public class Personal {
     String idCargo;
     String idPersonal;
-    int dniPersonal;
+    String dniPersonal;
     String nombrePersonal;
     String apellidoPersonal;
-    int telefonoPersonal;
+    String telefonoPersonal;
     String emailPersonal;
     String idSede;
 
-    public Personal(String idCargo, String idPersonal, int dniPersonal, String nombrePersonal, String apellidoPersonal, int telefonoPersonal, String emailPersonal, String idSede) {
+    public Personal(String idCargo, String idPersonal, String dniPersonal, String nombrePersonal, String apellidoPersonal, String telefonoPersonal, String emailPersonal, String idSede) {
         this.idCargo = idCargo;
         this.idPersonal = idPersonal;
         this.dniPersonal = dniPersonal;
@@ -46,11 +46,11 @@ public class Personal {
         this.idPersonal = idPersonal;
     }
 
-    public int getDniPersonal() {
+    public String getDniPersonal() {
         return dniPersonal;
     }
 
-    public void setDniPersonal(int dniPersonal) {
+    public void setDniPersonal(String dniPersonal) {
         this.dniPersonal = dniPersonal;
     }
 
@@ -70,11 +70,11 @@ public class Personal {
         this.apellidoPersonal = apellidoPersonal;
     }
 
-    public int getTelefonoPersonal() {
+    public String getTelefonoPersonal() {
         return telefonoPersonal;
     }
 
-    public void setTelefonoPersonal(int telefonoPersonal) {
+    public void setTelefonoPersonal(String telefonoPersonal) {
         this.telefonoPersonal = telefonoPersonal;
     }
 

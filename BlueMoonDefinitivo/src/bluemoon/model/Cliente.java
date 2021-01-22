@@ -3,17 +3,17 @@ package bluemoon.model;
 
 public class Cliente {
     String clienteId;
-    int dni;
+    String dni;
     String nombre;
     String apellido;
-    int telefono;
+    String telefono;
     String ruc;
     String direccion;
 
     public Cliente() {
     }
 
-    public Cliente(String clienteId, int dni, String nombre, String apellido, int telefono, String ruc, String direccion) {
+    public Cliente(String clienteId, String dni, String nombre, String apellido, String telefono, String ruc, String direccion) {
         this.clienteId = clienteId;
         this.dni = dni;
         this.nombre = nombre;
@@ -31,11 +31,11 @@ public class Cliente {
         this.clienteId = clienteId;
     }
 
-    public int getDni() {
+    public String getDni() {
         return dni;
     }
 
-    public void setDni(int dni) {
+    public void setDni(String dni) {
         this.dni = dni;
     }
 
@@ -55,11 +55,11 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
