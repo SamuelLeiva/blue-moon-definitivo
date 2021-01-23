@@ -27,19 +27,510 @@ public class Carta extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jpPlatos3 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jpBebidas3 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jpPlatos4 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jpBebidas = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jpPlatos = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tbCarta = new javax.swing.JTable();
+        txtBuscar = new javax.swing.JTextField();
+        jpBebidas1 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jpPlatos1 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jpBebidas2 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jpPlatos2 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jpPlatos5 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jpBebidas4 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jpPlatos6 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jpBebidas5 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jpPlatos7 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+
+        jpPlatos3.setBackground(new java.awt.Color(255, 207, 38));
+        jpPlatos3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpPlatos3MouseClicked(evt);
+            }
+        });
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel12.setText("Carnes");
+
+        javax.swing.GroupLayout jpPlatos3Layout = new javax.swing.GroupLayout(jpPlatos3);
+        jpPlatos3.setLayout(jpPlatos3Layout);
+        jpPlatos3Layout.setHorizontalGroup(
+            jpPlatos3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatos3Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel12)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jpPlatos3Layout.setVerticalGroup(
+            jpPlatos3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatos3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jpBebidas3.setBackground(new java.awt.Color(255, 207, 38));
+        jpBebidas3.setPreferredSize(new java.awt.Dimension(100, 0));
+        jpBebidas3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpBebidas3MouseClicked(evt);
+            }
+        });
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel13.setText("Carnes de caza");
+
+        javax.swing.GroupLayout jpBebidas3Layout = new javax.swing.GroupLayout(jpBebidas3);
+        jpBebidas3.setLayout(jpBebidas3Layout);
+        jpBebidas3Layout.setHorizontalGroup(
+            jpBebidas3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBebidas3Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel13)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+        jpBebidas3Layout.setVerticalGroup(
+            jpBebidas3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBebidas3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jpPlatos4.setBackground(new java.awt.Color(255, 207, 38));
+        jpPlatos4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpPlatos4MouseClicked(evt);
+            }
+        });
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel14.setText("Contornos");
+
+        javax.swing.GroupLayout jpPlatos4Layout = new javax.swing.GroupLayout(jpPlatos4);
+        jpPlatos4.setLayout(jpPlatos4Layout);
+        jpPlatos4Layout.setHorizontalGroup(
+            jpPlatos4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatos4Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel14)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jpPlatos4Layout.setVerticalGroup(
+            jpPlatos4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatos4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        setBackground(new java.awt.Color(220, 221, 231));
+        setPreferredSize(new java.awt.Dimension(1123, 682));
+
+        jPanel4.setBackground(new java.awt.Color(220, 221, 231));
+
+        jpBebidas.setBackground(new java.awt.Color(255, 207, 38));
+        jpBebidas.setPreferredSize(new java.awt.Dimension(100, 0));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setText("Bebidas frías");
+
+        javax.swing.GroupLayout jpBebidasLayout = new javax.swing.GroupLayout(jpBebidas);
+        jpBebidas.setLayout(jpBebidasLayout);
+        jpBebidasLayout.setHorizontalGroup(
+            jpBebidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBebidasLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jpBebidasLayout.setVerticalGroup(
+            jpBebidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBebidasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jpPlatos.setBackground(new java.awt.Color(255, 207, 38));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setText("Bebidas calientes");
+
+        javax.swing.GroupLayout jpPlatosLayout = new javax.swing.GroupLayout(jpPlatos);
+        jpPlatos.setLayout(jpPlatosLayout);
+        jpPlatosLayout.setHorizontalGroup(
+            jpPlatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatosLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel7)
+                .addContainerGap(63, Short.MAX_VALUE))
+        );
+        jpPlatosLayout.setVerticalGroup(
+            jpPlatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        tbCarta.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane2.setViewportView(tbCarta);
+
+        txtBuscar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jpBebidas1.setBackground(new java.awt.Color(255, 207, 38));
+        jpBebidas1.setPreferredSize(new java.awt.Dimension(100, 0));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel9.setText("Buffet");
+
+        javax.swing.GroupLayout jpBebidas1Layout = new javax.swing.GroupLayout(jpBebidas1);
+        jpBebidas1.setLayout(jpBebidas1Layout);
+        jpBebidas1Layout.setHorizontalGroup(
+            jpBebidas1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBebidas1Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel9)
+                .addContainerGap(150, Short.MAX_VALUE))
+        );
+        jpBebidas1Layout.setVerticalGroup(
+            jpBebidas1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBebidas1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jpPlatos1.setBackground(new java.awt.Color(255, 207, 38));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setText("Carnes");
+
+        javax.swing.GroupLayout jpPlatos1Layout = new javax.swing.GroupLayout(jpPlatos1);
+        jpPlatos1.setLayout(jpPlatos1Layout);
+        jpPlatos1Layout.setHorizontalGroup(
+            jpPlatos1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatos1Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jpPlatos1Layout.setVerticalGroup(
+            jpPlatos1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatos1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jpBebidas2.setBackground(new java.awt.Color(255, 207, 38));
+        jpBebidas2.setPreferredSize(new java.awt.Dimension(100, 0));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setText("Carnes de caza");
+
+        javax.swing.GroupLayout jpBebidas2Layout = new javax.swing.GroupLayout(jpBebidas2);
+        jpBebidas2.setLayout(jpBebidas2Layout);
+        jpBebidas2Layout.setHorizontalGroup(
+            jpBebidas2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBebidas2Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel10)
+                .addContainerGap(80, Short.MAX_VALUE))
+        );
+        jpBebidas2Layout.setVerticalGroup(
+            jpBebidas2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBebidas2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jpPlatos2.setBackground(new java.awt.Color(255, 207, 38));
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel11.setText("Contornos");
+
+        javax.swing.GroupLayout jpPlatos2Layout = new javax.swing.GroupLayout(jpPlatos2);
+        jpPlatos2.setLayout(jpPlatos2Layout);
+        jpPlatos2Layout.setHorizontalGroup(
+            jpPlatos2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatos2Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel11)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jpPlatos2Layout.setVerticalGroup(
+            jpPlatos2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatos2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jpPlatos5.setBackground(new java.awt.Color(255, 207, 38));
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel15.setText("Pescados y mariscos");
+
+        javax.swing.GroupLayout jpPlatos5Layout = new javax.swing.GroupLayout(jpPlatos5);
+        jpPlatos5.setLayout(jpPlatos5Layout);
+        jpPlatos5Layout.setHorizontalGroup(
+            jpPlatos5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatos5Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel15)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jpPlatos5Layout.setVerticalGroup(
+            jpPlatos5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatos5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jpBebidas4.setBackground(new java.awt.Color(255, 207, 38));
+        jpBebidas4.setPreferredSize(new java.awt.Dimension(100, 0));
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel16.setText("Pastas");
+
+        javax.swing.GroupLayout jpBebidas4Layout = new javax.swing.GroupLayout(jpBebidas4);
+        jpBebidas4.setLayout(jpBebidas4Layout);
+        jpBebidas4Layout.setHorizontalGroup(
+            jpBebidas4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBebidas4Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel16)
+                .addContainerGap(148, Short.MAX_VALUE))
+        );
+        jpBebidas4Layout.setVerticalGroup(
+            jpBebidas4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBebidas4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jpPlatos6.setBackground(new java.awt.Color(255, 207, 38));
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel17.setText("Postres");
+
+        javax.swing.GroupLayout jpPlatos6Layout = new javax.swing.GroupLayout(jpPlatos6);
+        jpPlatos6.setLayout(jpPlatos6Layout);
+        jpPlatos6Layout.setHorizontalGroup(
+            jpPlatos6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatos6Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel17)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jpPlatos6Layout.setVerticalGroup(
+            jpPlatos6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatos6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jpBebidas5.setBackground(new java.awt.Color(255, 207, 38));
+        jpBebidas5.setPreferredSize(new java.awt.Dimension(100, 0));
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel19.setText("Sandwich");
+
+        javax.swing.GroupLayout jpBebidas5Layout = new javax.swing.GroupLayout(jpBebidas5);
+        jpBebidas5.setLayout(jpBebidas5Layout);
+        jpBebidas5Layout.setHorizontalGroup(
+            jpBebidas5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBebidas5Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel19)
+                .addContainerGap(124, Short.MAX_VALUE))
+        );
+        jpBebidas5Layout.setVerticalGroup(
+            jpBebidas5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpBebidas5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jpPlatos7.setBackground(new java.awt.Color(255, 207, 38));
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel18.setText("Sopas");
+
+        javax.swing.GroupLayout jpPlatos7Layout = new javax.swing.GroupLayout(jpPlatos7);
+        jpPlatos7.setLayout(jpPlatos7Layout);
+        jpPlatos7Layout.setHorizontalGroup(
+            jpPlatos7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatos7Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel18)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jpPlatos7Layout.setVerticalGroup(
+            jpPlatos7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPlatos7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jpPlatos5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jpPlatos1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jpBebidas1, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+                        .addComponent(jpPlatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jpBebidas, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+                        .addComponent(jpPlatos2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jpBebidas2, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+                        .addComponent(jpBebidas4, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+                        .addComponent(jpPlatos6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jpPlatos7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jpBebidas5, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
+                    .addComponent(txtBuscar))
+                .addGap(63, 63, 63))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jpBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jpPlatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jpBebidas1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jpPlatos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jpBebidas2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jpPlatos2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jpPlatos5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jpBebidas4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jpPlatos6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jpBebidas5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jpPlatos7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 682, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(110, 110, 110))))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1123, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(152, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(130, 130, 130))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 682, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 836, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jpPlatos3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpPlatos3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jpPlatos3MouseClicked
+
+    private void jpBebidas3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpBebidas3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jpBebidas3MouseClicked
+
+    private void jpPlatos4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpPlatos4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jpPlatos4MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JPanel jpBebidas;
+    private javax.swing.JPanel jpBebidas1;
+    private javax.swing.JPanel jpBebidas2;
+    private javax.swing.JPanel jpBebidas3;
+    private javax.swing.JPanel jpBebidas4;
+    private javax.swing.JPanel jpBebidas5;
+    private javax.swing.JPanel jpPlatos;
+    private javax.swing.JPanel jpPlatos1;
+    private javax.swing.JPanel jpPlatos2;
+    private javax.swing.JPanel jpPlatos3;
+    private javax.swing.JPanel jpPlatos4;
+    private javax.swing.JPanel jpPlatos5;
+    private javax.swing.JPanel jpPlatos6;
+    private javax.swing.JPanel jpPlatos7;
+    private javax.swing.JTable tbCarta;
+    private javax.swing.JTextField txtBuscar;
     // End of variables declaration//GEN-END:variables
 }

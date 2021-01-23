@@ -36,7 +36,7 @@ public class SedeDAO implements CRUD{
                 s.setIdSede(rs.getString(2));
                 s.setNombreSede(rs.getString(3));
                 s.setDireccionSede(rs.getString(4));
-                s.setTelefonoSede(rs.getInt(5));
+                s.setTelefonoSede(rs.getString(5));
                 s.setEmailSede(rs.getString(6));
                 
                 lista.add(s);
