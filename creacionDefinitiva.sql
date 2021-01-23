@@ -1,6 +1,7 @@
---create database bluemoondefinitivo;
+create database bluemoondefinitivo;
 
 use bluemoondefinitivo;
+
 
 CREATE TABLE ALMACEN
 ( 
@@ -316,7 +317,8 @@ go
 CREATE TABLE MESA
 ( 
 	ID_MESA              char(15)  NOT NULL ,
-	CAPACIDAD            integer  NOT NULL 
+	CAPACIDAD            integer  NOT NULL ,
+	ESTADO               varchar(20)  NULL 
 )
 go
 
@@ -755,3 +757,4 @@ ALTER TABLE USUARIO
 		ON DELETE NO ACTION
 		ON UPDATE NO ACTION
 go
+
